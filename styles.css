@@ -42,7 +42,7 @@ h1 {
     margin: 10px auto;
     padding: 10px 20px;
     width: 90%; /* Use percentage for better responsiveness */
-    font-size: 16px;
+    font-size: 32px; /* Updated font size */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -98,7 +98,7 @@ h1 {
     }
 
     #choices button {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     #next {

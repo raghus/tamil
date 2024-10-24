@@ -1,0 +1,78 @@
+body {
+    font-family: 'Catamaran', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+#question {
+    font-size: 75px; /* Updated to 75px */
+    font-weight: bold; /* Make the text bold */
+    color: #00008b; /* Dark blue color */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px; /* Center the circle horizontally */
+}
+
+#choices button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 80%;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#choices button:hover {
+    background-color: #e0e0e0;
+}
+
+.correct {
+    background-color: #4caf50;
+    color: white;
+}
+
+.incorrect {
+    background-color: #f44336; /* Red color for incorrect answers */
+    color: white;
+    transition: none; /* Ensure no transition delay */
+}
+
+#next {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Removed float: right; to center the button */
+}
+
+#next:hover {
+    background-color: #1976d2;
+}

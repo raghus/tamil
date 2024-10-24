@@ -23,14 +23,14 @@ h1 {
 }
 
 #question {
-    font-size: 60px; /* Adjusted for smaller screens */
+    font-size: 60px; 
     font-weight: bold;
     color: #00008b;
     margin-bottom: 20px;
     background-color: #d3d3d3;
     border-radius: 50%;
-    width: 120px; /* Adjusted for smaller screens */
-    height: 120px; /* Adjusted for smaller screens */
+    width: 150px; 
+    height: 150px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,8 +93,8 @@ h1 {
 
     #question {
         font-size: 50px;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     #choices button {

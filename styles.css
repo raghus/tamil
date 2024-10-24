@@ -8,8 +8,8 @@ body {
 }
 
 #app {
-    max-width: 500px;
-    margin: 100px auto;
+    max-width: 90%; /* Use percentage for better responsiveness */
+    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,27 +17,31 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 24px; /* Adjusted for smaller screens */
     margin-bottom: 20px;
     color: #4a4a4a;
 }
 
 #question {
-    font-size: 75px; /* Updated to 75px */
-    font-weight: bold; /* Make the text bold */
-    color: #00008b; /* Dark blue color */
+    font-size: 60px; /* Adjusted for smaller screens */
+    font-weight: bold;
+    color: #00008b;
     margin-bottom: 20px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    width: 120px; /* Adjusted for smaller screens */
+    height: 120px; /* Adjusted for smaller screens */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px; /* Center the circle horizontally */
+    margin: 0 auto 20px;
 }
 
 #choices button {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
-    width: 80%;
+    width: 90%; /* Use percentage for better responsiveness */
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -55,9 +59,9 @@ h1 {
 }
 
 .incorrect {
-    background-color: #f44336; /* Red color for incorrect answers */
+    background-color: #f44336;
     color: white;
-    transition: none; /* Ensure no transition delay */
+    transition: none;
 }
 
 #next {
@@ -70,9 +74,34 @@ h1 {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    /* Removed float: right; to center the button */
 }
 
 #next:hover {
     background-color: #1976d2;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #app {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #question {
+        font-size: 50px;
+        width: 100px;
+        height: 100px;
+    }
+
+    #choices button {
+        font-size: 14px;
+    }
+
+    #next {
+        font-size: 14px;
+    }
 }

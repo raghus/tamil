@@ -72,10 +72,12 @@ function displayQuestion() {
         button.textContent = choice;
         button.onclick = () => {
             if (choice === correctAnswer) {
-                button.classList.add('correct');
+                button.style.backgroundColor = '#4caf50'; // Green for correct
+                button.style.color = 'white';
                 nextButton.style.display = 'block';
             } else {
-                button.classList.add('incorrect');
+                button.style.backgroundColor = '#f44336'; // Red for incorrect
+                button.style.color = 'white';
             }
             button.blur(); // Remove focus to ensure immediate color change
         };

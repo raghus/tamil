@@ -27,7 +27,7 @@ const tamilToEnglish = {
     'வ': 'va',
     'ழ': 'zha',
     'ள': 'la',
-    'ற': 'ra',
+    'ற': 'rra',
     'ன': 'na',
     'ஷ': 'sha',
     'ஸ': 'sa',

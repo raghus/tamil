@@ -38,8 +38,14 @@ const tamilToEnglish = {
 };
 
 const tamilLetters = Object.keys(tamilToEnglish);
+let incorrectGuesses = [];
+let questionCounter = 0;
 
 function getRandomLetter() {
+    if (questionCounter % 3 === 0 && incorrectGuesses.length > 0) {
+        return incorrectGuesses[Math.floor(Math.random() * incorrectGuesses.length)];
+    }
+    
     const randomIndex = Math.floor(Math.random() * tamilLetters.length);
     return tamilLetters[randomIndex];
 }
@@ -56,6 +62,7 @@ function getChoices(correctAnswer) {
 }
 
 function displayQuestion() {
+    questionCounter++;
     const questionElement = document.getElementById('question');
     const choicesElement = document.getElementById('choices');
     const nextButton = document.getElementById('next');
@@ -72,14 +79,22 @@ function displayQuestion() {
         button.textContent = choice;
         button.onclick = () => {
             if (choice === correctAnswer) {
-                button.style.backgroundColor = '#4caf50'; // Green for correct
+                button.style.backgroundColor = '#4caf50';
                 button.style.color = 'white';
                 nextButton.style.display = 'block';
+                incorrectGuesses = incorrectGuesses.filter(letter => letter !== tamilLetter);
             } else {
-                button.style.backgroundColor = '#f44336'; // Red for incorrect
+                button.style.backgroundColor = '#f44336';
                 button.style.color = 'white';
+                if (!incorrectGuesses.includes(tamilLetter)) {
+                    incorrectGuesses.push(tamilLetter);
+                }
             }
-            button.blur(); // Remove focus to ensure immediate color change
+            button.blur();
+            
+            choicesElement.querySelectorAll('button').forEach(btn => {
+                btn.disabled = true;
+            });
         };
         choicesElement.appendChild(button);
     });

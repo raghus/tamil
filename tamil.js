@@ -83,6 +83,9 @@ function displayQuestion() {
                 button.style.color = 'white';
                 nextButton.style.display = 'block';
                 incorrectGuesses = incorrectGuesses.filter(letter => letter !== tamilLetter);
+                choicesElement.querySelectorAll('button').forEach(btn => {
+                    btn.disabled = true;
+                });
             } else {
                 button.style.backgroundColor = '#f44336';
                 button.style.color = 'white';
@@ -91,10 +94,6 @@ function displayQuestion() {
                 }
             }
             button.blur();
-            
-            choicesElement.querySelectorAll('button').forEach(btn => {
-                btn.disabled = true;
-            });
         };
         choicesElement.appendChild(button);
     });
